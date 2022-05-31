@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        body {
+            background-color: #b0efb0;
+        }
+        .deep {
+            background-color: #b77b12;
+        }
+        .light {
+            background-color: #ffa200;
+        }
+        .lighter {
+            background-color: #f8c979;
+        }
+        .dim {
+            color: #dcdcdc;
+        }
+        caption {
+            color: #b77b12;
+            font-size: 30px;
+        }
+        tr, th, td {
+            font-size: large;
+            padding: 10px;
+            text-align: center;
+        }
+        table {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th><caption>
+                <span id="month"></span>
+                <button  class="deep" id="left" onclick="selectMonth(month)"><img src="P45.left.png" alt="Left-arrow" width="20" height="20"></button>
+                <button  class="deep" id="right" onclick="selectMonth(month)"><img src="P45.right.png" alt="Left-arrow" width="20" height="20"></button>
+            </caption></th>
+        </tr>
+
+        <script>
+            var nextPrev = "May 2022";
+            function selectMonth(month) {
+                if (month === "left") {
+                    nextPrev = "May 2022";
+                }
+                else if (month === "right") {
+                    nextPrev = "May 2026";
+                }
+            }
+            document.getElementById("month") .innerHTML = nextPrev;
+        </script>
+
+        <tr>
+            <th class="deep">Wk</th>
+            <th class="deep">Mon</th>
+            <th class="deep">Tue</th>
+            <th class="deep">Wed</th>
+            <th class="deep">Thu</th>
+            <th class="deep">Fri</th>
+            <th class="deep">Sat</th>
+            <th class="deep">Sun</th>
+        </tr>
+        <tr>
+            <td class="deep dim">17</td>
+            <td class="lighter"></td>
+            <td class="lighter"></td>
+            <td class="lighter"></td>
+            <td class="lighter"></td>
+            <td class="lighter"></td>
+            <td class="lighter"></td>
+            <td class="light">1</td>
+        </tr>
+        <tr>
+            <td class="deep dim">18</td>
+            <td class="light">2</td>
+            <td class="light">3</td>
+            <td class="light">4</td>
+            <td class="light">5</td>
+            <td class="light">6</td>
+            <td class="light">7</td>
+            <td class="light">8</td>
+        </tr>
+        <tr>
+            <td class="deep dim">19</td>
+            <td class="light">9</td>
+            <td class="light">10</td>
+            <td class="light">11</td>
+            <td class="light">12</td>
+            <td class="light">13</td>
+            <td class="light">14</td>
+            <td class="light">15</td>
+        </tr>
+        <tr>
+            <td class="deep dim">20</td>
+            <td class="light">16</td>
+            <td class="light">17</td>
+            <td class="light">18</td>
+            <td class="light">19</td>
+            <td class="light">20</td>
+            <td class="light">21</td>
+            <td class="light">22</td>
+        </tr>
+        <tr>
+            <td class="deep dim">21</td>
+            <td class="light">23</td>
+            <td class="light">24</td>
+            <td class="light">25</td>
+            <td class="light">26</td>
+            <td class="light">27</td>
+            <td class="light">28</td>
+            <td class="light">29</td>
+        </tr>
+        <tr>
+            <td class="deep dim">22</td>
+            <td class="light">30</td>
+            <td class="light">31</td>
+            <td class="lighter"></td>
+            <td class="lighter"></td>
+            <td class="lighter"></td>
+            <td class="lighter"></td>
+            <td class="lighter"></td>
+        </tr>
+        
+    </table>
+</body>
+</html>
